@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sajid Mir Balghari — International Digital Marketing Specialist. SEO, Google Ads, Meta Ads & Lead Generation for global businesses.">
+<title>Sajid Mir Balghari — International Digital Marketer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0b1829;
+  --navy2:#112236;
+  --navy3:#172d45;
+  --gold:#c9a84c;
+  --gold-light:#e2c87e;
+  --teal:#1d9e75;
+  --teal-dim:rgba(29,158,117,.12);
+  --teal-border:rgba(29,158,117,.25);
+  --text-primary:#f0ece2;
+  --text-muted:#8d9aaa;
+  --text-dim:#5b6878;
+  --border:rgba(255,255,255,.07);
+  --border-hover:rgba(255,255,255,.13);
+  --card:#111f30;
+  --card2:#162640;
+  --radius:12px;
+  --radius-sm:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--navy);
+  font-family:'DM Sans',sans-serif;
+  color:var(--text-primary);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+.fade-1{animation:fadeUp .6s ease both}
+.fade-2{animation:fadeUp .6s .1s ease both}
+.fade-3{animation:fadeUp .6s .2s ease both}
+.fade-4{animation:fadeUp .6s .3s ease both}
+.fade-5{animation:fadeUp .6s .4s ease both}
+.fade-6{animation:fadeUp .6s .5s ease both}
+
+/* ─── HERO ─── */
+.hero{
+  background:var(--navy2);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:3rem 2.5rem 2.5rem;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:1rem;
+}
+.hero::before{
+  content:'';
+  position:absolute;top:0;right:0;
+  width:380px;height:380px;
+  background:radial-gradient(ellipse at top right, rgba(201,168,76,.07) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';
+  position:absolute;bottom:0;left:0;
+  width:250px;height:250px;
+  background:radial-gradient(ellipse at bottom left, rgba(29,158,117,.06) 0%, transparent 70%);
+  pointer-events:none;
+}
+.avail-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(29,158,117,.1);
+  border:1px solid var(--teal-border);
+  border-radius:50px;
+  padding:5px 14px;
+  margin-bottom:1.75rem;
+}
+.avail-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+.avail-text{font-size:11.5px;color:var(--teal);letter-spacing:.6px;font-weight:500}
+.hero-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.6rem,6vw,4rem);
+  font-weight:600;
+  color:var(--text-primary);
+  line-height:1.08;
+  letter-spacing:-.02em;
+  margin-bottom:.3rem;
+}
+.hero-role{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1rem,2.5vw,1.3rem);
+  font-weight:400;
+  font-style:italic;
+  color:var(--gold);
+  margin-bottom:1.5rem;
+}
+.tag-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.5rem}
+.tag{
+  font-size:11px;color:var(--text-muted);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:50px;padding:4px 12px;
+  letter-spacing:.3px;
+}
+.hero-bio{
+  font-size:14px;color:var(--text-muted);
+  line-height:1.75;max-width:500px;
+  margin-bottom:2rem;
+}
+.hero-bio strong{color:var(--text-primary);font-weight:500}
+.stats-bar{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+  margin-bottom:2rem;
+}
+.stat-item{
+  padding:1.25rem 1rem;
+  text-align:center;
+  border-right:1px solid var(--border);
+  position:relative;
+}
+.stat-item:last-child{border-right:none}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.2rem;font-weight:600;
+  color:var(--text-primary);
+  line-height:1;
+  display:block;
+}
+.stat-lbl{font-size:11px;color:var(--text-dim);margin-top:4px;letter-spacing:.3px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn-primary{
+  background:var(--teal);
+  color:#fff;border:none;
+  padding:11px 24px;border-radius:var(--radius-sm);
+  font-size:13px;font-weight:500;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  transition:background .2s;text-decoration:none;display:inline-block;
+}
+.btn-primary:hover{background:#18886300}
+.btn-ghost{
+  background:transparent;color:var(--text-muted);
+  border:1px solid rgba(255,255,255,.15);
+  padding:11px 24px;border-radius:var(--radius-sm);
+  font-size:13px;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  transition:border-color .2s,color .2s;text-decoration:none;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ─── SECTIONS ─── */
+.section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.75rem;
+  margin-bottom:1rem;
+}
+.sec-eyebrow{
+  font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-eyebrow::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ─── WHY SAJID (COMPETITOR POSITIONING) ─── */
+.edge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.edge-card{
+  background:var(--card2);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  padding:1.25rem;
+  position:relative;overflow:hidden;
+}
+.edge-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+}
+.edge-card.ec1::before{background:var(--teal)}
+.edge-card.ec2::before{background:var(--gold)}
+.edge-card.ec3::before{background:#6e7cfc}
+.edge-card.ec4::before{background:#e07060}
+.edge-icon{font-size:20px;margin-bottom:10px}
+.edge-title{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:5px}
+.edge-desc{font-size:12px;color:var(--text-muted);line-height:1.55}
+.edge-vs{
+  display:inline-block;margin-top:8px;
+  font-size:10px;color:var(--text-dim);
+  border:1px solid var(--border);
+  border-radius:4px;padding:2px 7px;
+}
+
+/* ─── SERVICES ─── */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+.svc{
+  background:var(--card2);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:1.25rem;
+  transition:border-color .2s;
+}
+.svc:hover{border-color:var(--border-hover)}
+.svc-icon{
+  width:36px;height:36px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;margin-bottom:12px;
+}
+.svc-title{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:5px}
+.svc-desc{font-size:11.5px;color:var(--text-muted);line-height:1.55}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.svc-tag{font-size:10px;color:var(--teal);border:1px solid var(--teal-border);border-radius:50px;padding:2px 8px}
+
+/* ─── CASE STUDIES ─── */
+.case{
+  border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:1.5rem;margin-bottom:10px;
+  transition:border-color .2s;
+}
+.case:hover{border-color:var(--border-hover)}
+.case:last-child{margin-bottom:0}
+.case-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:12px}
+.case-title{font-size:14.5px;font-weight:500;color:var(--text-primary)}
+.case-sub{font-size:11px;color:var(--text-dim);margin-top:3px}
+.badge{font-size:10px;padding:4px 10px;border-radius:50px;white-space:nowrap;flex-shrink:0}
+.badge-green{background:rgba(29,158,117,.12);color:#4ecda4;border:1px solid rgba(29,158,117,.2)}
+.badge-blue{background:rgba(55,138,221,.1);color:#79b8f5;border:1px solid rgba(55,138,221,.2)}
+.badge-purple{background:rgba(110,124,252,.1);color:#a3acfc;border:1px solid rgba(110,124,252,.2)}
+.badge-gold{background:rgba(201,168,76,.1);color:#e2c87e;border:1px solid rgba(201,168,76,.2)}
+.case-desc{font-size:12.5px;color:var(--text-muted);line-height:1.7;margin-bottom:1.25rem}
+.metrics{display:flex;flex-wrap:wrap;gap:18px}
+.metric{padding-left:12px;border-left:2px solid var(--teal)}
+.metric-num{font-size:18px;font-weight:500;color:var(--text-primary);line-height:1}
+.metric-lbl{font-size:10px;color:var(--text-dim);margin-top:3px}
+.case-tools{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.ctool{font-size:10px;color:var(--text-dim);background:rgba(255,255,255,.04);border-radius:4px;padding:2px 7px}
+
+/* ─── MARKETS ─── */
+.market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.mkt{
+  background:var(--card2);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:12px;
+  text-align:center;
+}
+.mkt-flag{font-size:22px;display:block;margin-bottom:5px}
+.mkt-name{font-size:11px;color:var(--text-muted)}
+.mkt-focus{font-size:10px;color:var(--text-dim);margin-top:2px}
+
+/* ─── PROCESS ─── */
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+.pstep{
+  background:var(--card2);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:1.25rem;
+  position:relative;
+}
+.pstep-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:600;
+  color:rgba(255,255,255,.06);
+  position:absolute;top:8px;right:12px;
+  line-height:1;
+}
+.pstep-label{font-size:10px;color:var(--teal);font-weight:500;margin-bottom:6px;letter-spacing:.5px}
+.pstep-title{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:5px}
+.pstep-desc{font-size:11.5px;color:var(--text-muted);line-height:1.5}
+
+/* ─── COMPARE TABLE ─── */
+.compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.compare-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.compare-table th{
+  font-size:11px;font-weight:500;color:var(--text-dim);
+  letter-spacing:.5px;text-transform:uppercase;
+  padding:10px 14px;text-align:left;
+  border-bottom:1px solid var(--border);
+}
+.compare-table th.hl{color:var(--gold)}
+.compare-table td{
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  color:var(--text-muted);
+  vertical-align:middle;
+}
+.compare-table td.feat{color:var(--text-primary);font-weight:500}
+.compare-table td.hl{color:var(--text-primary)}
+.compare-table tr:last-child td{border-bottom:none}
+.chk{color:var(--teal)}
+.cross{color:var(--text-dim)}
+.col-sajid{background:rgba(29,158,117,.04)}
+
+/* ─── TESTIMONIALS ─── */
+.testi{
+  border-left:2px solid var(--teal);
+  padding-left:1.25rem;
+  margin-bottom:1.25rem;
+}
+.testi:last-child{margin-bottom:0}
+.testi-q{
+  font-size:13.5px;color:var(--text-primary);
+  font-style:italic;line-height:1.7;
+  margin-bottom:8px;
+}
+.testi-q::before{content:'\201C';color:var(--gold);font-size:1.1em}
+.testi-q::after{content:'\201D';color:var(--gold);font-size:1.1em}
+.testi-author{font-size:11px;color:var(--text-dim)}
+.testi-rating{color:var(--gold);font-size:12px;margin-bottom:6px;letter-spacing:2px}
+
+/* ─── CERTS & TOOLS ─── */
+.cert-grid{display:flex;flex-wrap:wrap;gap:8px}
+.cert{
+  display:flex;align-items:center;gap:8px;
+  background:var(--card2);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:9px 14px;
+}
+.cert-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.cert-name{font-size:12px;color:var(--text-primary)}
+.tools-row{display:flex;flex-wrap:wrap;gap:7px}
+.tool{
+  font-size:11.5px;color:var(--text-muted);
+  border:1px solid var(--border);
+  border-radius:50px;padding:5px 12px;
+}
+
+/* ─── CONTACT ─── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.citem{
+  background:var(--card2);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:14px;
+}
+.clabel{font-size:11px;color:var(--text-dim);margin-bottom:4px}
+.cval{font-size:13.5px;font-weight:500;color:var(--text-primary)}
+
+/* ─── CTA FOOTER ─── */
+.cta-footer{
+  background:linear-gradient(135deg,var(--navy3) 0%,rgba(17,34,54,.8) 100%);
+  border:1px solid rgba(201,168,76,.15);
+  border-radius:var(--radius);
+  padding:2.5rem;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-footer::before{
+  content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);
+  width:400px;height:200px;
+  background:radial-gradient(ellipse, rgba(201,168,76,.06) 0%, transparent 70%);
+}
+.cta-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:600;
+  color:var(--text-primary);margin-bottom:.5rem;
+}
+.cta-sub{font-size:13px;color:var(--text-muted);margin-bottom:1.5rem;max-width:380px;margin-left:auto;margin-right:auto}
+
+/* ─── MOBILE ─── */
+@media(max-width:600px){
+  .wrap{padding:1rem 1rem 3rem}
+  .hero{padding:2rem 1.5rem 2rem}
+  .hero-name{font-size:2.6rem}
+  .stats-bar{grid-template-columns:1fr 1fr;border-radius:8px}
+  .stats-bar .stat-item:nth-child(3){grid-column:1/-1;border-top:1px solid var(--border);border-right:none}
+  .contact-grid{grid-template-columns:1fr}
+  .compare-table th,.compare-table td{padding:8px 10px;font-size:11.5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ─── HERO ─── -->
+<div class="hero fade-1">
+  <div class="avail-pill">
+    <span class="avail-dot"></span>
+    <span class="avail-text">Open to International Projects</span>
+  </div>
+  <h1 class="hero-name">Sajid Mir<br>Balghari</h1>
+  <p class="hero-role">International Performance Marketer</p>
+  <div class="tag-row">
+    <span class="tag">SEO Specialist</span>
+    <span class="tag">Google Ads</span>
+    <span class="tag">Meta Ads</span>
+    <span class="tag">Lead Generation</span>
+    <span class="tag">Funnel Optimization</span>
+    <span class="tag">B2B Demand Gen</span>
+  </div>
+  <p class="hero-bio">
+    I help <strong>international businesses</strong> acquire customers at scale through data-driven SEO, paid media, and conversion optimization — with a track record of delivering <strong>4x+ ROAS</strong> and measurable revenue growth across UK, UAE, US and Canadian markets.
+  </p>
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">3+</span>
+      <span class="stat-lbl">Years experience</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">20+</span>
+      <span class="stat-lbl">Campaigns managed</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4x</span>
+      <span class="stat-lbl">Avg. ROAS delivered</span>
+    </div>
+  </div>
+  <div class="cta-row">
+    <a href="mailto:sajidmirb@gmail.com" class="btn-primary">Work with me ↗</a>
+    <a href="#cases" class="btn-ghost">View case studies</a>
+  </div>
+</div>
+
+<!-- ─── COMPETITIVE EDGE ─── -->
+<div class="section fade-2">
+  <div class="sec-eyebrow">Why choose me over other freelancers</div>
+  <div class="edge-grid">
+    <div class="edge-card ec1">
+      <div class="edge-icon">📊</div>
+      <div class="edge-title">Full-funnel accountability</div>
+      <div class="edge-desc">I own the entire journey — from traffic to lead to revenue — not just clicks or impressions.</div>
+      <span class="edge-vs">vs. channel-only specialists</span>
+    </div>
+    <div class="edge-card ec2">
+      <div class="edge-icon">🌍</div>
+      <div class="edge-title">Built for international markets</div>
+      <div class="edge-desc">Multi-market keyword research, hreflang SEO, geo-targeted ads and cross-currency campaign management.</div>
+      <span class="edge-vs">vs. local-market-only freelancers</span>
+    </div>
+    <div class="edge-card ec3">
+      <div class="edge-icon">⚙️</div>
+      <div class="edge-title">Technical SEO depth</div>
+      <div class="edge-desc">Core Web Vitals, schema markup, crawl optimization — not just surface-level keyword stuffing.</div>
+      <span class="edge-vs">vs. content-only SEOs</span>
+    </div>
+    <div class="edge-card ec4">
+      <div class="edge-icon">💰</div>
+      <div class="edge-title">Premium quality, competitive rate</div>
+      <div class="edge-desc">Enterprise-grade strategy at a fraction of the cost of Western agencies. Maximum ROI guaranteed.</div>
+      <span class="edge-vs">vs. expensive Western agencies</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SERVICES ─── -->
+<div class="section fade-3">
+  <div class="sec-eyebrow">Services for international clients</div>
+  <div class="svc-grid">
+    <div class="svc">
+      <div class="svc-icon" style="background:rgba(29,158,117,.12)">🔍</div>
+      <div class="svc-title">International SEO</div>
+      <div class="svc-desc">Multi-market keyword research, technical audits, link building & multilingual content strategy for global rankings.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Technical SEO</span>
+        <span class="svc-tag">Link Building</span>
+        <span class="svc-tag">hreflang</span>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-icon" style="background:rgba(55,138,221,.1)">📈</div>
+      <div class="svc-title">Google Ads</div>
+      <div class="svc-desc">Search, Display, Shopping & Performance Max campaigns optimized for global lead generation and e-commerce revenue.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Search Ads</span>
+        <span class="svc-tag">Shopping</span>
+        <span class="svc-tag">PMax</span>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-icon" style="background:rgba(110,124,252,.1)">📱</div>
+      <div class="svc-title">Meta Ads</div>
+      <div class="svc-desc">Facebook & Instagram funnels targeting international audiences with precision creative, lookalike & retargeting strategies.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">Cold Audiences</span>
+        <span class="svc-tag">Retargeting</span>
+        <span class="svc-tag">Lookalike</span>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-icon" style="background:rgba(201,168,76,.1)">🔄</div>
+      <div class="svc-title">Funnel & CRO</div>
+      <div class="svc-desc">Landing page design, A/B testing, heatmap analysis & conversion rate optimization to maximize every click.</div>
+      <div class="svc-tags">
+        <span class="svc-tag">A/B Testing</span>
+        <span class="svc-tag">CRO</span>
+        <span class="svc-tag">Hotjar</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── MARKETS SERVED ─── -->
+<div class="section fade-3">
+  <div class="sec-eyebrow">Markets served</div>
+  <div class="market-grid">
+    <div class="mkt"><span class="mkt-flag">🇬🇧</span><span class="mkt-name">United Kingdom</span><span class="mkt-focus">SEO · PPC</span></div>
+    <div class="mkt"><span class="mkt-flag">🇦🇪</span><span class="mkt-name">UAE</span><span class="mkt-focus">E-comm · Ads</span></div>
+    <div class="mkt"><span class="mkt-flag">🇺🇸</span><span class="mkt-name">United States</span><span class="mkt-focus">B2B · SaaS</span></div>
+    <div class="mkt"><span class="mkt-flag">🇨🇦</span><span class="mkt-name">Canada</span><span class="mkt-focus">Lead Gen</span></div>
+    <div class="mkt"><span class="mkt-flag">🇦🇺</span><span class="mkt-name">Australia</span><span class="mkt-focus">SEO · Meta</span></div>
+    <div class="mkt"><span class="mkt-flag">🌏</span><span class="mkt-name">Global</span><span class="mkt-focus">Multi-market</span></div>
+  </div>
+</div>
+
+<!-- ─── CASE STUDIES ─── -->
+<div class="section fade-4" id="cases">
+  <div class="sec-eyebrow">Case studies</div>
+
+  <div class="case">
+    <div class="case-header">
+      <div>
+        <div class="case-title">Education group — international student acquisition</div>
+        <div class="case-sub">5-country campaign · Meta Ads + Google Ads</div>
+      </div>
+      <span class="badge badge-green">Lead Gen</span>
+    </div>
+    <div class="case-desc">
+      Built a full-funnel paid acquisition system targeting prospective international students across UK, UAE, Canada, Australia and India. Created segmented audience profiles by country, designed ad creatives for each market, and rebuilt landing pages with localized CTAs — resulting in the highest-ever enrollment quarter.
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="metric-num">312%</div><div class="metric-lbl">More qualified leads</div></div>
+      <div class="metric"><div class="metric-num">58%</div><div class="metric-lbl">Lower CPL</div></div>
+      <div class="metric"><div class="metric-num">4.2x</div><div class="metric-lbl">ROAS</div></div>
+      <div class="metric"><div class="metric-num">60 days</div><div class="metric-lbl">To results</div></div>
+    </div>
+    <div class="case-tools">
+      <span class="ctool">Google Ads</span><span class="ctool">Meta Ads Manager</span><span class="ctool">GA4</span><span class="ctool">Hotjar</span><span class="ctool">Unbounce</span>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="case-header">
+      <div>
+        <div class="case-title">Fashion e-commerce — UK & UAE market expansion</div>
+        <div class="case-sub">UK & UAE · International SEO + Google Shopping</div>
+      </div>
+      <span class="badge badge-blue">SEO + E-comm</span>
+    </div>
+    <div class="case-desc">
+      Executed a full technical SEO audit, built an international keyword strategy, and launched Google Shopping campaigns for a fashion brand entering UK and UAE markets. Implemented hreflang tags, fixed crawl errors, and built high-authority links through multilingual content partnerships — taking the brand from invisible to dominant in target markets.
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="metric-num">240%</div><div class="metric-lbl">Organic traffic growth</div></div>
+      <div class="metric"><div class="metric-num">22</div><div class="metric-lbl">Top-3 keyword rankings</div></div>
+      <div class="metric"><div class="metric-num">3.8x</div><div class="metric-lbl">Revenue growth</div></div>
+    </div>
+    <div class="case-tools">
+      <span class="ctool">Ahrefs</span><span class="ctool">SEMrush</span><span class="ctool">Screaming Frog</span><span class="ctool">GSC</span><span class="ctool">Google Shopping</span>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="case-header">
+      <div>
+        <div class="case-title">SaaS startup — B2B demand generation (US & Canada)</div>
+        <div class="case-sub">US & Canada · LinkedIn Ads + Google Search</div>
+      </div>
+      <span class="badge badge-purple">B2B SaaS</span>
+    </div>
+    <div class="case-desc">
+      Designed a full B2B demand generation engine combining LinkedIn Ads (for cold targeting) and Google Search (for intent capture). Wrote ad copy, built retargeting sequences, implemented HubSpot CRM integration for lead scoring, and tracked pipeline influence down to closed revenue.
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="metric-num">180+</div><div class="metric-lbl">Qualified leads/month</div></div>
+      <div class="metric"><div class="metric-num">$42</div><div class="metric-lbl">Cost per lead</div></div>
+      <div class="metric"><div class="metric-num">22%</div><div class="metric-lbl">Demo conversion rate</div></div>
+    </div>
+    <div class="case-tools">
+      <span class="ctool">LinkedIn Ads</span><span class="ctool">Google Ads</span><span class="ctool">HubSpot</span><span class="ctool">Zapier</span><span class="ctool">GA4</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── COMPETITOR COMPARISON TABLE ─── -->
+<div class="section fade-4">
+  <div class="sec-eyebrow">How I compare</div>
+  <div class="compare-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>What you need</th>
+          <th class="hl">Sajid Mir ✓</th>
+          <th>Large Agency</th>
+          <th>Local Freelancer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="feat">International market expertise</td>
+          <td class="hl col-sajid"><span class="chk">✓</span> UK, UAE, US, CA, AU</td>
+          <td><span class="chk">✓</span> Often outsourced</td>
+          <td><span class="cross">✗</span> Mostly local</td>
+        </tr>
+        <tr>
+          <td class="feat">Full-funnel ownership</td>
+          <td class="hl col-sajid"><span class="chk">✓</span> Traffic → Revenue</td>
+          <td><span class="cross">✗</span> Siloed teams</td>
+          <td><span class="cross">✗</span> One channel only</td>
+        </tr>
+        <tr>
+          <td class="feat">Transparent reporting</td>
+          <td class="hl col-sajid"><span class="chk">✓</span> Weekly dashboards</td>
+          <td><span class="cross">✗</span> Monthly PDF</td>
+          <td>Varies</td>
+        </tr>
+        <tr>
+          <td class="feat">Technical SEO capability</td>
+          <td class="hl col-sajid"><span class="chk">✓</span> Core Web Vitals + schema</td>
+          <td><span class="chk">✓</span> Team needed</td>
+          <td><span class="cross">✗</span> Surface only</td>
+        </tr>
+        <tr>
+          <td class="feat">Cost efficiency</td>
+          <td class="hl col-sajid"><span class="chk">✓</span> Competitive rate</td>
+          <td><span class="cross">✗</span> High overhead</td>
+          <td><span class="chk">✓</span> Low but limited</td>
+        </tr>
+        <tr>
+          <td class="feat">Direct communication</td>
+          <td class="hl col-sajid"><span class="chk">✓</span> Always you & me</td>
+          <td><span class="cross">✗</span> Account managers</td>
+          <td><span class="chk">✓</span> Direct</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ─── PROCESS ─── -->
+<div class="section fade-5">
+  <div class="sec-eyebrow">My engagement process</div>
+  <div class="process-grid">
+    <div class="pstep">
+      <span class="pstep-num">01</span>
+      <div class="pstep-label">Week 1</div>
+      <div class="pstep-title">Discovery & Audit</div>
+      <div class="pstep-desc">Deep dive into your business, competitors, and current performance. Full audit delivered.</div>
+    </div>
+    <div class="pstep">
+      <span class="pstep-num">02</span>
+      <div class="pstep-label">Week 1–2</div>
+      <div class="pstep-title">Strategy Blueprint</div>
+      <div class="pstep-desc">Custom channel plan, budget allocation, KPIs and 90-day roadmap agreed with you.</div>
+    </div>
+    <div class="pstep">
+      <span class="pstep-num">03</span>
+      <div class="pstep-label">Week 2–3</div>
+      <div class="pstep-title">Campaign Launch</div>
+      <div class="pstep-desc">Build and launch campaigns, creatives, landing pages and tracking systems.</div>
+    </div>
+    <div class="pstep">
+      <span class="pstep-num">04</span>
+      <div class="pstep-label">Ongoing</div>
+      <div class="pstep-title">Optimize & Scale</div>
+      <div class="pstep-desc">Weekly performance reports, A/B tests, budget scaling and continuous improvement.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── TESTIMONIALS ─── -->
+<div class="section fade-5">
+  <div class="sec-eyebrow">Client testimonials</div>
+  <div class="testi">
+    <div class="testi-rating">★★★★★</div>
+    <div class="testi-q">Sajid delivered exceptional results for our international campaign. Our lead volume tripled within 60 days and cost per acquisition dropped significantly. One of the best investments we made.</div>
+    <div class="testi-author">— Marketing Director, Education Group · United Kingdom</div>
+  </div>
+  <div class="testi">
+    <div class="testi-rating">★★★★★</div>
+    <div class="testi-q">Professional, data-driven, and always transparent with reporting. He treats your ad budget like it's his own money. Highly recommend for any business looking to scale globally.</div>
+    <div class="testi-author">— CEO, E-commerce Brand · United Arab Emirates</div>
+  </div>
+  <div class="testi">
+    <div class="testi-rating">★★★★★</div>
+    <div class="testi-q">What surprised me most was how quickly Sajid understood our B2B audience. The LinkedIn strategy he built brought us better leads than anything we had tried before.</div>
+    <div class="testi-author">— Founder, SaaS Startup · United States</div>
+  </div>
+</div>
+
+<!-- ─── CERTS ─── -->
+<div class="section fade-5">
+  <div class="sec-eyebrow">Certifications</div>
+  <div class="cert-grid">
+    <div class="cert"><div class="cert-dot"></div><span class="cert-name">Google Ads Certified</span></div>
+    <div class="cert"><div class="cert-dot"></div><span class="cert-name">Google Analytics 4</span></div>
+    <div class="cert"><div class="cert-dot"></div><span class="cert-name">Meta Blueprint</span></div>
+    <div class="cert"><div class="cert-dot"></div><span class="cert-name">HubSpot SEO</span></div>
+    <div class="cert"><div class="cert-dot"></div><span class="cert-name">SEMrush SEO Toolkit</span></div>
+    <div class="cert"><div class="cert-dot"></div><span class="cert-name">LinkedIn Marketing Solutions</span></div>
+  </div>
+</div>
+
+<!-- ─── TOOLS ─── -->
+<div class="section fade-6">
+  <div class="sec-eyebrow">Tools & platforms</div>
+  <div class="tools-row">
+    <span class="tool">Google Ads</span>
+    <span class="tool">Meta Business Suite</span>
+    <span class="tool">LinkedIn Campaign Manager</span>
+    <span class="tool">Google Analytics 4</span>
+    <span class="tool">Search Console</span>
+    <span class="tool">Ahrefs</span>
+    <span class="tool">SEMrush</span>
+    <span class="tool">Screaming Frog</span>
+    <span class="tool">HubSpot</span>
+    <span class="tool">Hotjar</span>
+    <span class="tool">Zapier</span>
+    <span class="tool">Notion</span>
+    <span class="tool">Google Looker Studio</span>
+    <span class="tool">Canva</span>
+  </div>
+</div>
+
+<!-- ─── CONTACT ─── -->
+<div class="section fade-6">
+  <div class="sec-eyebrow">Contact & availability</div>
+  <div class="contact-grid">
+    <div class="citem"><div class="clabel">LinkedIn</div><div class="cval">sajid-mir-balghari</div></div>
+    <div class="citem"><div class="clabel">Location</div><div class="cval">Pakistan (Remote ready)</div></div>
+    <div class="citem"><div class="clabel">Timezone</div><div class="cval">PKT — UTC +5:00</div></div>
+    <div class="citem"><div class="clabel">Languages</div><div class="cval">English · Urdu</div></div>
+  </div>
+</div>
+
+<!-- ─── CTA FOOTER ─── -->
+<div class="cta-footer fade-6">
+  <div class="cta-title">Ready to scale globally?</div>
+  <p class="cta-sub">Let's discuss your growth goals and build a strategy that delivers measurable international results.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+    <a href="mailto:sajidmirb@gmail.com" class="btn-primary" style="background:var(--gold);color:#0b1829;font-weight:600">Book a free strategy call ↗</a>
+    <a href="https://linkedin.com/in/sajid-mir-balghari" class="btn-ghost" target="_blank">View LinkedIn profile</a>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>
